@@ -12,6 +12,7 @@ message: 'Idempotency-Key header is required'
 }
 });
 }
+
 // Rule 2: repeat key -> replay stored response
 if (idempotency.has(key)) {
 const stored = idempotency.get(key);
